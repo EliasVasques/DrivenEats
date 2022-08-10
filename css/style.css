@@ -56,11 +56,11 @@ header h2 {
 }
 
 /* PRATOS divs */
-.pratos {
+.pratos, .bebidas, .sobremesas {
   display: flex;
   overflow-x: scroll;
 }
-.prato {
+.prato, .bebida, .sobremesa {
   background-color: #fff;
   width: 172px;
   height: 216px;
@@ -71,7 +71,7 @@ header h2 {
 }
 
 /* PRATOS textos */
-.prato p {
+.prato p, .bebida p, .sobremesa p {
   margin: 10px 0;
   font-family: "Roboto", sans-serif;
 }
@@ -122,4 +122,9 @@ main {
   font-weight: 400;
   font-size: 20px;
   color: #ffffff;
+}
+
+/* ITEM-SELECIONADO */
+.item-selecionado {
+    border: 1px solid #32B72F;
 }
