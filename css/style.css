@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #CF2B2B;
+    color: #FFFFFF;
+}
+header h1 {
+    font-size: 44px;
+}
+header h2 {
+    font-size: 18px;
+}
+
+.escolher {
+    background-color: aquamarine;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.pratos {
+    display: flex;
+    overflow-x: scroll
+}
+.prato {
+    background-color: #fff;
+    width: 172px;
+    height: 216px;
+    margin: 0 5px ;
+    padding: 10px;
+}
