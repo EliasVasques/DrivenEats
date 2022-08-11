@@ -68,6 +68,8 @@ header h2 {
   margin-right: 5px;
   padding: 10px;
   border-radius: 9px;
+
+  position: relative; /* pro .v-escolhido ser absolute */
 }
 
 /* PRATOS textos */
@@ -89,6 +91,9 @@ header h2 {
   font-size: 16px;
   color: #000000;
   font-weight: 400;
+}
+.v-escolhido {
+  display: none;
 }
 
 /* FECHAR PEDIDO */
@@ -126,5 +131,14 @@ main {
 
 /* ITEM-SELECIONADO */
 .item-selecionado {
-    border: 1px solid #32B72F;
+    border: 4px solid #32B72F;
+}
+.item-selecionado .v-escolhido {
+  display: initial;
+  width: 15.44px;
+  height: 15.44px;
+
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
