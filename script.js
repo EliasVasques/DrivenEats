@@ -56,31 +56,39 @@ const podeFecharPedido = () => {
 }
 
 const fecharPedido = () => {
+    if (!podeFecharPedido()) return;
+
+    /* pegar valor */
     const todosItens = [
-        ...document.getElementsByClassName('prato'), 
-        ...document.getElementsByClassName('bebida'), 
+        ...document.getElementsByClassName('prato'),
+        ...document.getElementsByClassName('bebida'),
         ...document.getElementsByClassName('sobremesa')
     ];
-    
-    /* pegar valor */
     let valor = 0;
-    for(let i=0; i < todosItens.length; i++) {
-        if(todosItens[i].classList.contains('item-selecionado')) {
+    for (let i = 0; i < todosItens.length; i++) {
+        if (todosItens[i].classList.contains('item-selecionado')) {
             let precoString = todosItens[i].querySelector('.preco').innerHTML;
-            valor += Number(pegarValorInteiro(precoString)); 
+            valor += Number(pegarValorInteiro(precoString));
         }
     }
 
-    if (podeFecharPedido()) {
-        const texto = `Olá, gostaria de fazer o pedido:
+    /* informação */
+    const nome = prompt("Nome: ");
+    const endereco = prompt("Endereço: ");
+    const texto =
+        `Olá, gostaria de fazer o pedido:
         - Prato: Frango Yin Yang
         - Bebida: Coquinha Gelada
         - Sobremesa: Pudim
-        Total: R$ ${valor.toFixed(2)}`
-        const url = 'https://wa.me/?text=' + encodeURIComponent(texto);
-        let enviarMsgWhats = window.open(url, '_blank');
-        enviarMsgWhats.focus();
-    }
+        Total: R$ ${valor.toFixed(2)}
+        
+        Nome: ${nome}
+        Endereço: ${endereco}`
+    const url = 'https://wa.me/?text=' + encodeURIComponent(texto);
+
+    /* enviar whatsaap */
+    let enviarMsgWhats = window.open(url, '_blank');
+    enviarMsgWhats.focus();
 }
 
 const pegarValorInteiro = (preco) => {
