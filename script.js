@@ -56,6 +56,20 @@ const podeFecharPedido = () => {
 }
 
 const fecharPedido = () => {
+
+    if (!podeFecharPedido()) return;
+
+    document.querySelector('.confirmar-pedido').style.display = 'flex';
+    document.querySelector('.background-confirmar-pedido').style.display = 'initial';
+}
+
+const cancelarPedido = () => {
+    document.querySelector('.confirmar-pedido').style.display = 'none';
+    document.querySelector('.background-confirmar-pedido').style.display = 'none';
+}
+
+const confirmarPedido = () => {
+    
     if (!podeFecharPedido()) return;
 
     /* pegar valor */
