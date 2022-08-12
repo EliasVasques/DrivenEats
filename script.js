@@ -1,20 +1,11 @@
-function itemEscolhido(itemSelecionado, tipoItem) {
-    let cont = 0;
-    while (true) {
-        const elemento = document.getElementsByClassName(tipoItem)[cont];
+function itemEscolhido(itemSelecionado, classePai) {
+    const seletor = '.' + classePai + ' .item-selecionado'
+    
+    const anterior = document.querySelector(seletor);
+    
+    if(anterior !== null) anterior.classList.remove('item-selecionado');
 
-        if (elemento === undefined) break
-
-        cont++;
-        elemento.classList.remove('item-selecionado');
-    }
-
-    if (itemSelecionado.classList.contains('item-selecionado')) {
-        itemSelecionado.classList.remove('item-selecionado');
-    }
-    else {
-        itemSelecionado.classList.add('item-selecionado');
-    }
+    itemSelecionado.classList.add('item-selecionado');
 
     if (podeFecharPedido()) {
         const fecharPedido = document.querySelector('.fechar-pedido');
