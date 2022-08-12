@@ -16,31 +16,31 @@
     </header>
 
     <main>
-      <div class="background-confirmar-pedido"></div>
-      <div class="confirmar-pedido">
-
+      <div class="background-confirmar-pedido nao-aparece"></div>
+      
+      <div class="confirmar-pedido nao-aparece">
         <h3>Confirme seu pedido</h3>
 
-        <div class="prato-info">
-          <p class="nome">Frango Yin Yang</p>
-          <p class="preco">14,90</p>
+        <div class="item">
+          <p class="nome"></p>
+          <p class="preco"></p>
         </div>
-        <div class="bebida-info">
-          <p class="nome">Frango Yin Yang</p>
-          <p class="preco">14,90</p>
+        <div class="item">
+          <p class="nome"></p>
+          <p class="preco"></p>
         </div>
-        <div class="sobremesa-info">
-          <p class="nome">Frango Yin Yang</p>
-          <p class="preco">14,90</p>
+        <div class="item">
+          <p class="nome"></p>
+          <p class="preco"></p>
         </div>
         <div class="total-info">
           <p class="nome">TOTAL</p>
-          <p class="preco">R$ 27,70</p>
+          <p class="preco"></p>
         </div>
-        
+
         <button onclick="confirmarPedido()">Tudo certo, pode pedir!</button>
         <p class="cancelar" onclick="cancelarPedido()">Cancelar</p>
-      </div> 
+      </div>
 
       <div class="escolher">
         <h3>Primeiro, seu prato</h3>
@@ -53,16 +53,16 @@
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="prato" onclick="itemEscolhido(this, 'prato')">
-            <img src="img/frango_yin_yang.png" alt="" />
-            <p class="nome">Frango Yin Yang</p>
-            <p class="descricao">Um pouco de batata, um pouco de salada</p>
+            <img src="img/arroz.jpg" alt="" />
+            <p class="nome">Arroz</p>
+            <p class="descricao">Prato tradicional...</p>
             <p class="preco">R$ 10,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="prato" onclick="itemEscolhido(this, 'prato')">
-            <img src="img/frango_yin_yang.png" alt="" />
-            <p class="nome">Frango Yin Yang</p>
-            <p class="descricao">Um pouco de batata, um pouco de salada</p>
+            <img src="img/feijao.jpg" alt="" />
+            <p class="nome">Feijão</p>
+            <p class="descricao">Ferro e...</p>
             <p class="preco">R$ 8,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
@@ -80,16 +80,16 @@
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="bebida" onclick="itemEscolhido(this, 'bebida')">
-            <img src="img/coquinha_gelada.png" alt="" />
-            <p class="nome">Coquinha gelada</p>
-            <p class="descricao">Lata 350ml</p>
+            <img src="img/fanta.jpg" alt="" />
+            <p class="nome">Fanta</p>
+            <p class="descricao">Lata 550ml</p>
             <p class="preco">R$ 5,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="bebida" onclick="itemEscolhido(this, 'bebida')">
-            <img src="img/coquinha_gelada.png" alt="" />
-            <p class="nome">Coquinha gelada</p>
-            <p class="descricao">Lata 350ml</p>
+            <img src="img/suco.jpg" alt="" />
+            <p class="nome">Suco</p>
+            <p class="descricao">Suquinho no copo</p>
             <p class="preco">R$ 6,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
@@ -107,16 +107,16 @@
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="sobremesa" onclick="itemEscolhido(this, 'sobremesa')">
-            <img src="img/pudim.png" alt="" />
-            <p class="nome">Pudim</p>
-            <p class="descricao">Apenas pudim</p>
+            <img src="img/gelatina.jpg" alt="" />
+            <p class="nome">Gelatina</p>
+            <p class="descricao">Leve e macio...</p>
             <p class="preco">R$ 2,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>
           <div class="sobremesa" onclick="itemEscolhido(this, 'sobremesa')">
-            <img src="img/pudim.png" alt="" />
-            <p class="nome">Pudim</p>
-            <p class="descricao">Apenas pudim</p>
+            <img src="img/melancia.jpg" alt="" />
+            <p class="nome">Melancia</p>
+            <p class="descricao">Saudável, doce e...</p>
             <p class="preco">R$ 9,00</p>
             <img src="img/ok.png" class="v-escolhido" alt="" />
           </div>

@@ -77,6 +77,14 @@ header h2 {
   position: relative; /* pro .v-escolhido ser absolute */
 }
 
+.prato img,
+.bebida img,
+.sobremesa img {
+  width: 144px;
+  height: 87px;
+  object-fit: cover;
+}
+
 /* PRATOS textos */
 .prato p,
 .bebida p,
@@ -163,7 +171,7 @@ main {
 
   z-index: 3;
 
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -217,8 +225,6 @@ main {
 .background-confirmar-pedido {
   background-color: rgba(255, 255, 255, 0.9);
 
-  display: none;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -227,4 +233,12 @@ main {
 
   width: 100vw;
   height: 100vh;
+}
+
+/* CLASSES USADA PELO JS */
+.liberado {
+  background-color: #32b72f;
+}
+.nao-aparece {
+  display: none;
 }
