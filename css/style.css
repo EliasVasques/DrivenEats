@@ -29,6 +29,7 @@ header {
 }
 main {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 header h1 {
   font-size: 44px;
@@ -126,9 +127,7 @@ footer {
 
   z-index: 1;
 }
-main {
-  margin-bottom: 120px;
-}
+
 .fechar-pedido {
   background-color: #cbcbcb;
 
@@ -178,7 +177,8 @@ main {
   background-color: #50d074;
   color: #fff;
 
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
 
   width: 377px;
   height: 353px;
@@ -187,7 +187,6 @@ main {
 .confirmar-pedido h3 {
   margin: 20px 0;
   font-weight: 700;
-  font-size: 22px;
 }
 .total-info {
   font-weight: 900;
@@ -200,7 +199,6 @@ main {
 .confirmar-pedido > div > p {
   color: #fff;
   font-weight: 300;
-  font-size: 22px;
   margin: 5px 0;
 }
 .confirmar-pedido button {

@@ -1,9 +1,10 @@
+
+
 function itemEscolhido(itemSelecionado, classePai) {
     const seletor = '.' + classePai + ' .item-selecionado'
-    
     const anterior = document.querySelector(seletor);
-    
-    if(anterior !== null) anterior.classList.remove('item-selecionado');
+
+    if (anterior !== null) anterior.classList.remove('item-selecionado');
 
     itemSelecionado.classList.add('item-selecionado');
 
@@ -16,7 +17,6 @@ function itemEscolhido(itemSelecionado, classePai) {
 }
 
 const podeFecharPedido = () => {
-
     let temPrato = false;
     const pratos = document.getElementsByClassName('prato');
     for (let i = 0; i < pratos.length; i++) {
@@ -43,7 +43,7 @@ const podeFecharPedido = () => {
     }
 
     if (temPrato && temBebida && temSobremesa) return true;
-    else return false;
+    return false;
 }
 
 const fecharPedido = () => {
@@ -57,12 +57,12 @@ const fecharPedido = () => {
     const nomesItens = pegarNomeOuValoresItensSelecionados(1);
     const valores = pegarNomeOuValoresItensSelecionados(2);
 
-    const confirmarPedidoNomes = document.querySelectorAll('.item .nome');
+    const confirmarPedidoNomes = document.querySelectorAll('.item .confirmar-nome');
     for (let i = 0; i < confirmarPedidoNomes.length; i++) {
         confirmarPedidoNomes[i].innerHTML = nomesItens[i];
     }
 
-    const confirmarPedidoPrecos = document.querySelectorAll('.item .preco');
+    const confirmarPedidoPrecos = document.querySelectorAll('.item .confirmar-preco');
     for (let i = 0; i < confirmarPedidoPrecos.length; i++) {
         confirmarPedidoPrecos[i].innerHTML = `R$ ${valores[i]},00`;
     }
@@ -71,9 +71,8 @@ const fecharPedido = () => {
     const total = valores.reduce((soma, valor) => {
         return soma += valor;
     }, 0)
-    const confirmarPedidoTotal = document.querySelector('.total-info .preco');
+    const confirmarPedidoTotal = document.querySelector('.total-info .confirmar-preco');
     confirmarPedidoTotal.innerHTML = `R$ ${total},00`;
-    
 }
 
 const cancelarPedido = () => {
@@ -96,8 +95,8 @@ const pegarNomeOuValoresItensSelecionados = (oqueQuer) => {
             nomesItens.push(todosItens[i].querySelector('.nome').innerHTML)
         }
     }
-    if(oqueQuer === 1) return nomesItens;
-    else if(oqueQuer === 2) return valores;
+    if (oqueQuer === 1) return nomesItens;
+    else if (oqueQuer === 2) return valores;
     return;
 }
 const confirmarPedido = () => {
